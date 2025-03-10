@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import Image  from 'next/image';
 
 interface BearAvatarProps {
   currentImage: string;
@@ -7,8 +8,8 @@ interface BearAvatarProps {
 
 const BearAvatar = memo(function BearAvatar({ currentImage, size = 130 }: BearAvatarProps) {
   return (
-    <img 
-      src={currentImage} 
+    <Image 
+      src={currentImage || '/assets/img/hide_bear_0.png'} 
       className="rounded-full transition-all duration-200 ease-in-out"
       width={size}
       height={size}
