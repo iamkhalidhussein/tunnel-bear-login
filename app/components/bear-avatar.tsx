@@ -19,6 +19,7 @@ const BearAvatar = memo(function BearAvatar({ currentImage, size = 130 }: BearAv
         transform: 'translate3d(0,0,0)' // Force GPU acceleration
       }}
       priority={true}
+      loading='eager'
       tabIndex={-1}
       alt="Animated bear avatar"
     />
