@@ -9,7 +9,7 @@ interface BearAvatarProps {
 const BearAvatar = memo(function BearAvatar({ currentImage, size = 130 }: BearAvatarProps) {
   console.log(currentImage)
   return (
-    <Image 
+    <img 
       src={currentImage || '/assets/img/hide_bear_0.png'} 
       className="rounded-full transition-all duration-200 ease-in-out"
       width={size}
@@ -18,7 +18,6 @@ const BearAvatar = memo(function BearAvatar({ currentImage, size = 130 }: BearAv
         objectFit: 'contain',
         transform: 'translate3d(0,0,0)' // Force GPU acceleration
       }}
-      priority={true}
       loading='eager'
       tabIndex={-1}
       alt="Animated bear avatar"
